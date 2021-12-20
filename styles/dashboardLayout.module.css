@@ -1,0 +1,205 @@
+.mainContainer {
+  display: flex;
+  font-family: Nunito, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text_color--default);
+}
+
+.dashboardNav {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-gap: 10px;
+  background-color: var(--tertiary-bg);
+  height: 10vh;
+  width: 100%;
+  padding: 0 10px;
+  z-index: 0;
+}
+.dashboardNav.open {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+}
+
+
+
+.profile {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+ @media only screen and  (max-width:667px) {
+    .profile {
+      display: none;
+      grid-gap: 10px;
+      align-items: center;
+    }
+    .btn--log_out {
+      display: none;
+    }
+    .menu_ham {
+      display: block;
+      height: 300px;
+      width: 300px;
+      padding: 10px;
+      background: #000;
+      border: 1px solid red;
+    }
+ }
+
+.profile__pic {
+  background-color: green;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 2;
+  min-height: 100vh;
+  /* background-color: red; */
+}
+
+.sect {
+  padding: 5px 1.4em;
+}
+
+.sect_income_summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  text-align: center;
+}
+.sect_analytics {
+  /* flex: 8; */
+  /* height: 30%; */
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+.sect_income_summary h3 {
+  align-self: flex-start;
+}
+@media only screen and  (max-width:667px) {
+    .sect_income_summary h3 {
+      align-self: center;
+    }
+ }
+
+.summary {
+  width: 80%;
+  margin: 10%;
+  margin-top: 30px;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2% 5%;
+}
+
+.summary__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary__balance_big{
+  font-size: 4em;
+}
+
+.sect_analytics {
+  /* flex: 8; */
+  /* height: 30%; */
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.asset_list {
+  counter-reset: assets;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 50px;
+  /* background-color: rgb(41, 139, 41); */
+  /* list-style: decimal;
+  list-style-position: inside; */
+
+  
+}
+
+.asset {
+  counter-increment: assets;
+  padding: 10px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 200ms;
+  border-bottom: 1px solid var(--secondary-accent);
+}
+
+.asset:hover {
+ background-color: rgba(100, 100, 100, 0.1);
+}
+
+.asset__icon {
+ width: 20px;
+ height: 20px;
+ background-color: red;
+}
+
+.asset::before {
+  position: absolute;
+  left: -6%;
+  content: counter(assets);
+}
+
+.graph {
+  height: 20em;
+  width: 25em;
+  background-color: var(--secondary-bg);
+}
+
+
+/*COME BACK HERE AND IMPLEMENT GRID INSTEAD OF FLEX*/
+
+      .statRow {
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 20px;
+        justify-content: space-evenly;
+      }
+    
+    .topCoins {
+      margin-top: 2rem;
+    }
+  
+@media only screen and (max-width: 600px) {
+ 
+    
+      .globalStat {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+        .statRow {
+
+          width: 100%;
+          flex-wrap: no-wrap;
+        }
+    
+  
+}

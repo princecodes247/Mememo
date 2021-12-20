@@ -1,0 +1,25 @@
+.ham {
+    display: none;	
+    }
+@media only screen and  (max-width:667px) {
+.ham {
+	display: block;
+	z-index: 100;
+}
+
+.hamOpen {
+	/*position: absolute;*/
+	/*background: red;*/
+}
+
+.menu {
+	display: none;
+}
+
+.menuOpen {
+	display: flex;
+}
+
+ 
+
+ }
